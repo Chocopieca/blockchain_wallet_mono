@@ -1,0 +1,4 @@
+
+
+
+import{_ as r,u as _,r as o,o as a,b as n,w as s,f as d,T as u}from"./index-aaecdc93.js";import{u as m}from"./useEtherJsStore-51f2c7eb.js";import{u as p}from"./useErc20TokenStore-157d8b1b.js";const l=_({name:"ConnectMetamask",data(){return{isLoading:!1}},setup(){const t=p();async function e(){await t.init()}return{initErc20:e}},methods:{async onConnectMetamask(){this.isLoading=!0,await m().onConnect(),await this.loadData(),this.isLoading=!1},async loadData(){await this.initErc20()}}});function f(t,e,k,C,h,B){const c=o("BaseLoading"),i=o("BaseButton");return a(),n(u,{mode:"out-in"},{default:s(()=>[t.isLoading?(a(),n(c,{key:0})):(a(),n(i,{key:1,buttonColor:"#E95420",class:"connect-button",onClick:t.onConnectMetamask},{default:s(()=>[d(" Connect Metamask ")]),_:1},8,["onClick"]))]),_:1})}const L=r(l,[["render",f],["__scopeId","data-v-520a34aa"]]);export{L as default};
