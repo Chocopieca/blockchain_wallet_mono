@@ -12,7 +12,7 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 // https://vitejs.dev/config/
 export default defineConfig(({mode}) => {
   return {
-    base: "/Robot_Dream_Blockchain_Practice/",
+    base: "/blockchain_wallet_mono/",
     plugins: [
       vue(),
       wasm(),

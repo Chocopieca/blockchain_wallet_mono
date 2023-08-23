@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/Robot_Dream_Blockchain_Practice/'
+  publicPath: '/blockchain_wallet_mono/'
 }
