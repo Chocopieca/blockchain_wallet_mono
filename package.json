@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "deploy": "npm run build && cd dist && cp index.html 404.html && cd ../ && git add dist -f && git commit -m 'Update_dist' && cd ../../ && git subtree push --prefix Lecture24/HomeWork24/dist origin gh-pages"
+    "deploy": "npm run build && cp ./dist/index.html ./dist/404.html && git add dist -f && git commit -m 'Update_dist' && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "bip39": "^3.1.0",
