@@ -1,0 +1,17 @@
+@import "@/assets/scss/tools/variables.css";
+
+.main-white { background: #FFFFFF; }
+.main-black { background: #000000; }
+.main-red { background: var(--color-text-red); }
+.main-bright-red { background: var(--color-text-bright-red); }
+.main-blue { background: var(--color-link-blue); }
+.main-light-blue { background: var(--color-text-light-blue); }
+.main-orange { background: var(--color-orange); }
+
+.main-white-text { color: #FFFFFF; }
+.main-black-text { color: #000000; }
+.main-red-text { color: var(--color-text-red); }
+.main-bright-red-text { color: var(--color-text-bright-red); }
+.main-blue-text { color: var(--color-link-blue); }
+.main-light-blue-text { color: var(--color-text-light-blue); }
+.main-orange-text { color: var(--color-orange); }

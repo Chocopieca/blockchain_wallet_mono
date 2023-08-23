@@ -1,0 +1,68 @@
+@import "./values";
+
+@mixin generator-cols($cols, $breakpoints) {
+
+  @for $i from 1 through $cols {
+    .col-#{$i} {
+      flex: 0 0 auto;
+      width: #{calc(#{$i} / 12 * 100%)};
+    }
+    @each $breakpoint in $breakpoints {
+      @include generate-media-cols($i, nth($breakpoint, 1), nth($breakpoint, 2));
+    }
+  }
+
+  .col {
+    flex: 1 0 0;
+  }
+
+  @each $breakpoint in $breakpoints {
+    @media ('min-width': #{nth($breakpoint, 1)}) {
+      .col-#{nth($breakpoint, 2)} {
+        flex: 1 0 0;
+      }
+    }
+  }
+}
+
+@mixin generate-media-cols($index, $breakpoint, $BPTitle) {
+  @media ('min-width': #{$breakpoint}) {
+    body .col-#{$BPTitle}-#{$index} {
+      flex: 0 0 auto;
+      width: #{calc(#{$index} / 12 * 100%)};
+    }
+  }
+}
+
+@mixin generator-container($container-width, $default-container-width) {
+
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: #{$default-container-width};
+    margin: 0 auto;
+  }
+
+  @each $width in $container-width {
+    @media ('min-width': #{nth($width, 1)}) {
+      .container-#{nth($width, 2)} {
+        width: #{nth($width, 3)};
+      }
+    }
+  }
+}
+
+@mixin start($breakpoints, $container-width, $cols, $default-container-width) {
+  @include generator-cols($cols, $breakpoints);
+  @include generator-container($container-width, $default-container-width);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@include start($breakpoints, $container-width, $cols, $default-container-width);
