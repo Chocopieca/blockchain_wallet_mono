@@ -2,7 +2,7 @@
 # blockchain_wallet_mono
 Site link: [https://chocopieca.github.io/blockchain_wallet_mono/](https://chocopieca.github.io/blockchain_wallet_mono/)
 
-This template should help get you started developing with Vue 3 in Vite.
+This example of my work with ether and bitcoin.
 
 ## Recommended IDE Setup
 
